@@ -1,6 +1,5 @@
-pandas
-matplotlib.pyplot
-seaborn
+flask
 numpy
-sklearn
-guicorn
+pandas
+scikit-learn
+gunicorn
