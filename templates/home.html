@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BC Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>A Rama Krishna Sanath's Project</h1>
+    <h1>BC Prediction</h1>
+
+    <form action="{{url_for('predict_datapoint') }}" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="ID">ID</label><br>
+                    <input id="ID" type="text" name="ID" placeholder="ID" required>
+                </td>
+                <td>
+                    <label for="radius_mean">radius_mean</label><br>
+                    <input id="radius_mean" type="text" name="radius_mean" placeholder="radius_mean" required>
+                </td>
+                <td>
+                    <label for="texture_mean">texture_mean</label><br>
+                    <input id="texture_mean" type="text" name="texture_mean" placeholder="texture_mean" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="smoothness_mean">smoothness_mean</label><br>
+                    <input id="smoothness_mean" type="text" name="smoothness_mean" placeholder="smoothness_mean" required>
+                </td>
+                <td>
+                    <label for="compactness_mean">compactness_mean</label><br>
+                    <input id="compactness_mean" type="text" name="compactness_mean" placeholder="compactness_mean" required>
+                </td>
+                <td>
+                    <label for="symmetry_mean">symmetry_mean</label><br>
+                    <input id="symmetry_mean" type="text" name="symmetry_mean" placeholder="symmetry_mean" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="fractal_dimension_mean">fractal_dimension_mean</label><br>
+                    <input id="fractal_dimension_mean" type="text" name="fractal_dimension_mean" placeholder="fractal_dimension_mean" required>
+                </td>
+                <td>
+                    <label for="radius_se">radius_se</label><br>
+                    <input id="radius_se" type="text" name="radius_se" placeholder="radius_se" required>
+                </td>
+                <td>
+                    <label for="texture_se">texture_se</label><br>
+                    <input id="texture_se" type="text" name="texture_se" placeholder="texture_se" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="smoothness_se">smoothness_se</label><br>
+                    <input id="smoothness_se" type="text" name="smoothness_se" placeholder="smoothness_se" required>
+                </td>
+                <td>
+                    <label for="compactness_se">compactness_se</label><br>
+                    <input id="compactness_se" type="text" name="compactness_se" placeholder="compactness_se" required>
+                </td>
+                <td>
+                    <label for="concave_points_se">concave_points_se</label><br>
+                    <input id="concave_points_se" type="text" name="concave_points_se" placeholder="concave_points_se" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="symmetry_se">symmetry_se</label><br>
+                    <input id="symmetry_se" type="text" name="symmetry_se" placeholder="symmetry_se" required>
+                </td>
+                <td>
+                    <label for="fractal_dimension_se">fractal_dimension_se</label><br>
+                    <input id="fractal_dimension_se" type="text" name="fractal_dimension_se" placeholder="fractal_dimension_se" required>
+                </td>
+                <td>
+                    <label for="smoothness_worst">smoothness_worst</label><br>
+                    <input id="smoothness_worst" type="text" name="smoothness_worst" placeholder="smoothness_worst" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="symmetry_worst">symmetry_worst</label><br>
+                    <input id="symmetry_worst" type="text" name="symmetry_worst" placeholder="symmetry_worst" required>
+                </td>
+                <td>
+                    <label for="fractal_dimension_worst">fractal_dimension_worst</label><br>
+                    <input id="fractal_dimension_worst" type="text" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required>
+                </td>
+                <td>
+                    <!-- empty cell for alignment -->
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align:center;">
+                    <button type="submit" value="Predict">Predict</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>The Brest Cancer Prediction is {{ results }}</h2>
+</body>
+</html>
